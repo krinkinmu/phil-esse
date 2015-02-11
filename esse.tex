@@ -1,0 +1,47 @@
+\documentclass[12pt,a4paper,oneside,russian]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian,english]{babel}
+
+\usepackage[T2A]{fontenc}
+
+\usepackage{hyperref}
+\usepackage[final]{listings}
+\usepackage{breakurl}
+\usepackage{cite}
+\usepackage{perpage}
+
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2cm]{geometry}
+
+
+\def\UrlBreaks{\do\/\do-}
+
+\lstset{
+	frame=single,
+	breaklines=true,
+	basicstyle=\small,
+	postbreak=\raisebox{0ex}{\ensuremath{\hookrightarrow\space}},
+	numbers=left
+}
+
+\MakePerPage{footnote}
+\title{История программной инженерии. Идеи, парадигмы и методологии.}
+\author{Кринкин Михаил Юрьевич, СПб АУ НОЦ НТ РАН}
+\begin{document}
+\renewcommand\contentsname{Содержание}
+\renewcommand\refname{Ссылки}
+\maketitle
+\setcounter{page}{2}.
+\sloppy
+\tableofcontents
+\clearpage
+\include{intro}
+\include{prehistory}
+\include{mastering_machine}
+\include{stable}
+\include{mini}
+\include{conc}
+\bibliography{refs}{}
+\bibliographystyle{apalike}
+
+\end{document}
